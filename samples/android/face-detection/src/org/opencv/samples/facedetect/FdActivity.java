@@ -179,7 +179,7 @@ public class FdActivity extends Activity implements CvCameraViewListener2 {
         }
 
         MatOfRect faces = new MatOfRect();
-
+        /*tip: Native detector has better performance*/
         if (mDetectorType == JAVA_DETECTOR) {
             if (mJavaDetector != null)
                 mJavaDetector.detectMultiScale(mGray, faces, 1.1, 2, 2, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
